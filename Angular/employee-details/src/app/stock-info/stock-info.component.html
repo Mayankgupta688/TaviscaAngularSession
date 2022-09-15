@@ -1,0 +1,6 @@
+<br/><b>Enter Stock URL: </b><input type="text" [(ngModel)]="stockName" />
+<input type="button" value="Submit" (click)="addStockUrl()" /><hr/><br/>
+
+<div *ngFor="let stock of stockArray">
+    <app-stock-exchange [stockUrl]="stock"></app-stock-exchange><hr/>
+</div>
