@@ -10,6 +10,12 @@ export class StockInfoComponent implements OnInit {
   stockArray: string[] = [];
   stockName: string = "Add Stock Url";
 
+  data: any =  {
+    userDelay: 2000
+  }
+
+  jsonData = JSON.stringify(this.data);
+
   updateStockUrl(event: Event) {
     debugger;
     this.stockName = (event.target as HTMLInputElement).value;

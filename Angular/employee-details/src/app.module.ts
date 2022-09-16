@@ -8,6 +8,12 @@ import { EmployeeCountComponent } from './app/employee-count/employee-count.comp
 import { StockExchangeComponent } from './app/stock-exchange/stock-exchange.component';
 import { StockInfoComponent } from './app/stock-info/stock-info.component';
 import { FormsModule } from "@angular/forms";
+import DelayedRenderingDirective from "./directives/delayed-rendering.directive";
+import ApplyColorDirective from "./directives/apply-color.directive";
+import { AddEmployeeComponent } from './app/add-employee/add-employee.component';
+import { CounterDataComponent } from './app/counter-data/counter-data.component';
+import { CounterChildComponent } from './app/counter-child/counter-child.component';
+import { EmployeeComponent } from './app/employee/employee.component';
 
 @NgModule({
     declarations: [ 
@@ -16,13 +22,19 @@ import { FormsModule } from "@angular/forms";
         InterpolateDataComponent,
         EmployeeCountComponent,
         StockExchangeComponent,
-        StockInfoComponent 
+        StockInfoComponent,
+        DelayedRenderingDirective,
+        ApplyColorDirective,
+        AddEmployeeComponent,
+        CounterDataComponent,
+        CounterChildComponent,
+        EmployeeComponent
     ],
     imports: [ 
         BrowserModule,
         HttpClientModule,
         FormsModule
     ],
-    bootstrap: [ StockInfoComponent ]
+    bootstrap: [ InterpolateDataComponent ]
 })
 export default class AppModule { }

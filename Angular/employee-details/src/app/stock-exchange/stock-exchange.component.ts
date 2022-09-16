@@ -24,7 +24,7 @@ export class StockExchangeComponent implements OnInit {
         this.previosPrice = this.stockPrice;
         this.stockPrice = response['data']['pricecurrent'];
         this.stockName = response['data']['company']
-      })
+      });
     }, 2000)
   }
 }

@@ -6,17 +6,11 @@
     Filter Employee:<input type="text" (keyup)="filterData($event)" />
 </div><br/><hr/>
 
-<div class="card" *ngFor="let employee of displayList" 
-     style="width: 18rem; display: inline-block; padding: 5px; margin: 10px">
-    <img src="https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg" class="card-img-top" 
-         [alt]="employee.name">
-    <div class="card-body">
-      <h5 class="card-title">{{employee.name}}</h5>
-      <b *ngIf="+employee.id % 2 == 0">Odd Id</b>
-      <b *ngIf="+employee.id % 2 == 1">Even Id</b>
-      <p class="card-text">User Id: {{employee.id}}. </p>
-      <input type="button" value="Delete" 
-             (click)="deleteEmployee(employee.id)" 
-             class="btn btn-primary" />
-    </div>
+<div style="margin: 20px">
+    <app-add-employee></app-add-employee><br/>
+</div>
+
+
+<div *ngFor="let employee of displayList">
+   <app-employee></app-employee>
 </div>

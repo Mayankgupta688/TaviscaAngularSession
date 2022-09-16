@@ -1,0 +1,17 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Add Employee
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Name: </label><input type="text" [(ngModel)]="name" /></div>
+          <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Id: </label><input type="text" [(ngModel)]="id" /></div>
+          <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Created At: </label> <input type="text" [(ngModel)]="createdAt" /></div><br/>
+          <input type="button" value="Add Employee" (click)="addEmployee()" />
+        </div>
+      </div>
+    </div>
+  </div>

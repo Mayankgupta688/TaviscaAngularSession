@@ -8,14 +8,24 @@ import { HttpClient} from "@angular/common/http";
 export default class AppService {
 
     employeeUpdated = new EventEmitter()
+    updateCounterEvent = new EventEmitter()
     employees: IEmployee[] = [];
 
     constructor(private _httpClientService: HttpClient) {
         this.getEmployeeData();
     }
 
+    addEmployeeData(employeeData: IEmployee) {
+        debugger;
+        this._httpClientService.post("http://localhost:3000/employees", employeeData).subscribe((response: any) => {
+            this.getEmployeeData()
+        }, () => {
+            // Captures Failure
+        })
+    }
+
     getEmployeeData() {
-        this._httpClientService.get("https://5a530e1477e1d20012fa066a.mockapi.io/login").subscribe((response: any) => {
+        this._httpClientService.get("http://localhost:3000/employees").subscribe((response: any) => {
             this.employees = response;
             this.employeeUpdated.emit();
         }, () => {
@@ -24,10 +34,21 @@ export default class AppService {
     }
 
     deleteEmployee(employeeId: string) {
-        this.employees = this.employees.filter(function(employee) {
-          return employee.id != employeeId;
-        });
+        this._httpClientService.delete("http://localhost:3000/employees/" + employeeId).subscribe(() => {
+            debugger;
+            // this.employees = this.employees.filter(function(employee) {
+            //     return employee.id != employeeId;
+            //   });
+      
+            // this.employeeUpdated.emit();
 
-        this.employeeUpdated.emit();
+            this.getEmployeeData();
+        }, () => {
+            alert("Failed Deleting Employee From List")
+        }) 
+    }
+
+    addCounter() {
+        this.updateCounterEvent.emit();
     }
 }

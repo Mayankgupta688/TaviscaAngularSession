@@ -1,0 +1,5 @@
+<h1>Counter Value is {{counter}}</h1><hr/>
+
+<div>
+    <app-counter-child [counter]="counter" (notifyParent)="addCounter()"></app-counter-child>
+</div>
