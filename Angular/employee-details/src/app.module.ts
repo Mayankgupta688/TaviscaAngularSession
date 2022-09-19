@@ -14,6 +14,7 @@ import { AddEmployeeComponent } from './app/add-employee/add-employee.component'
 import { CounterDataComponent } from './app/counter-data/counter-data.component';
 import { CounterChildComponent } from './app/counter-child/counter-child.component';
 import { EmployeeComponent } from './app/employee/employee.component';
+import StringReplacePipe from "./pipes/string-replace.pipe";
 
 @NgModule({
     declarations: [ 
@@ -28,7 +29,8 @@ import { EmployeeComponent } from './app/employee/employee.component';
         AddEmployeeComponent,
         CounterDataComponent,
         CounterChildComponent,
-        EmployeeComponent
+        EmployeeComponent,
+        StringReplacePipe
     ],
     imports: [ 
         BrowserModule,

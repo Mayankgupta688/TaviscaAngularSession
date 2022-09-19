@@ -7,6 +7,9 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
+          Name is {{name | updateString : " " : "_"}}<br/>
+          Id is {{id | updateString : "," : " "}}<br/>
+          Name is {{createdAt | updateString : "%" : ""}}<br/>
           <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Name: </label><input type="text" [(ngModel)]="name" /></div>
           <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Id: </label><input type="text" [(ngModel)]="id" /></div>
           <div><label style="padding: 5px; margin: 5px; display: inline-block; width: 200px;">Enter Created At: </label> <input type="text" [(ngModel)]="createdAt" /></div><br/>

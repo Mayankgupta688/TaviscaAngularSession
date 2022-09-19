@@ -11,6 +11,6 @@
 </div>
 
 
-<div *ngFor="let employee of displayList">
-   <app-employee></app-employee>
+<div *ngFor="let employee of displayList" style="display: inline">
+   <app-employee [employee]="employee" (deleteEmployeeEvent)="deleteEmployee($event)"></app-employee>
 </div>

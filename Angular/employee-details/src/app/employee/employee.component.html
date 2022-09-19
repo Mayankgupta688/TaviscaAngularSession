@@ -1,13 +1,13 @@
 <div class="card" style="width: 18rem; display: inline-block; padding: 5px; margin: 10px">
     <img src="https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg" class="card-img-top" 
-         [alt]="employee.name">
+         [alt]="employee?.name">
     <div class="card-body">
-      <h5 class="card-title">{{employee.name}}</h5>
-      <b *ngIf="+employee.id % 2 == 0">Odd Id</b>
-      <b *ngIf="+employee.id % 2 == 1">Even Id</b>
-      <p class="card-text">User Id: {{employee.id}}. </p>
+      <h5 class="card-title">{{employee?.name}}</h5>
+      <p class="card-text">User Id: {{employee?.id | currency : 'INR' : true}} </p>
+      <p class="card-text">User Id: {{employee?.name | uppercase}}. </p>
+      <p class="card-text">User Id: {{employee?.name | lowercase}}. </p>
       <input type="button" value="Delete" 
-             (click)="deleteEmployee(employee.id)" 
+             (click)="deleteEmployee(employee ? employee.id : '' )" 
              class="btn btn-primary" />
     </div>
 </div>

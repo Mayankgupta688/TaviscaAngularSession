@@ -1,24 +1,6 @@
 {
   "employees": [
     {
-      "id": "31",
-      "createdAt": "2019-07-09T11:44:07.092Z",
-      "name": "Lenora Price",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/incubo82/128.jpg"
-    },
-    {
-      "id": "32",
-      "createdAt": "2019-07-09T20:56:58.884Z",
-      "name": "Clementina Sanford",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/thomasschrijer/128.jpg"
-    },
-    {
-      "id": "33",
-      "createdAt": "2019-07-10T07:56:08.182Z",
-      "name": "Willow Windler",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/eitarafa/128.jpg"
-    },
-    {
       "id": "34",
       "createdAt": "2019-07-09T22:57:09.161Z",
       "name": "Johanna Waters",
@@ -467,6 +449,12 @@
       "id": "100001",
       "avatar": "https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg",
       "createdAt": "Yesterday"
+    },
+    {
+      "name": "test",
+      "id": "444",
+      "avatar": "https://st.depositphotos.com/1594308/4626/i/950/depositphotos_46262829-stock-photo-happy-employee.jpg",
+      "createdAt": "today"
     }
   ],
   "manager": [
